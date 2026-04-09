@@ -101,7 +101,7 @@ img, svg { display: block; max-width: 100%; }
 /* ==================== HERO ==================== */
 .hero {
     position: relative;
-    padding: 100px 24px 60px;
+    padding: 120px 24px 140px;
     overflow: hidden;
     text-align: center;
 }
@@ -210,162 +210,6 @@ img, svg { display: block; max-width: 100%; }
 .btn-secondary:hover {
     background: var(--bg-soft);
 }
-
-/* ==================== DEVICE MOCKUP ==================== */
-.device-wrap {
-    margin-top: 72px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
-.device-wrap::before {
-    content: '';
-    position: absolute;
-    bottom: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 70%;
-    height: 40px;
-    background: radial-gradient(ellipse at center, rgba(0,0,0,0.15) 0%, transparent 70%);
-    filter: blur(10px);
-}
-.device {
-    width: 280px;
-    height: 570px;
-    background: linear-gradient(145deg, #2a2a2c 0%, #0a0a0a 100%);
-    border-radius: 52px;
-    padding: 11px;
-    box-shadow:
-        0 0 0 1.5px rgba(255,255,255,0.08),
-        0 40px 80px -20px rgba(0,0,0,0.4),
-        0 20px 40px -15px rgba(0,0,0,0.2);
-    position: relative;
-}
-.device-screen {
-    width: 100%;
-    height: 100%;
-    background:
-      linear-gradient(180deg, rgba(30,41,59,0.9) 0%, rgba(10,15,25,0.95) 100%),
-      radial-gradient(ellipse at 30% 20%, rgba(100,120,180,0.3) 0%, transparent 50%);
-    border-radius: 42px;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-.device-notch {
-    position: absolute;
-    top: 13px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 108px;
-    height: 32px;
-    background: #000;
-    border-radius: 100px;
-    z-index: 3;
-}
-.device-status {
-    color: white;
-    font-size: 14px;
-    font-weight: 600;
-    display: flex;
-    justify-content: space-between;
-    padding: 16px 28px 8px;
-    letter-spacing: -0.01em;
-}
-.device-status-right {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-.device-status-right svg { width: 16px; height: 11px; color: white; }
-.device-body {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 40px 20px 28px;
-    position: relative;
-}
-.device-lens-chip {
-    align-self: center;
-    display: flex;
-    gap: 6px;
-    background: rgba(0,0,0,0.4);
-    backdrop-filter: blur(10px);
-    padding: 6px;
-    border-radius: 100px;
-    font-size: 11px;
-    font-weight: 600;
-    color: rgba(255,255,255,0.6);
-    margin-top: 24px;
-}
-.device-lens-chip span {
-    padding: 6px 12px;
-    border-radius: 100px;
-}
-.device-lens-chip .active {
-    background: rgba(255,255,255,0.18);
-    color: white;
-}
-.device-viewfinder {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgba(255,255,255,0.2);
-    position: relative;
-}
-.device-viewfinder::before {
-    content: '';
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    border: 1.5px solid rgba(255,255,255,0.15);
-    border-radius: 4px;
-}
-.device-viewfinder svg { width: 44px; height: 44px; position: relative; z-index: 1; }
-
-.device-controls {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 8px;
-}
-.device-thumb {
-    width: 44px;
-    height: 44px;
-    border-radius: 10px;
-    background: linear-gradient(135deg, #6b7280 0%, #374151 100%);
-    border: 1.5px solid rgba(255,255,255,0.2);
-}
-.device-shutter-wrap {
-    width: 68px;
-    height: 68px;
-    border-radius: 50%;
-    border: 3px solid rgba(255,255,255,0.95);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.device-shutter {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    background: white;
-}
-.device-flip {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.12);
-    backdrop-filter: blur(10px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-}
-.device-flip svg { width: 18px; height: 18px; }
 
 /* ==================== SECTIONS ==================== */
 section {
@@ -724,10 +568,7 @@ section {
 /* ==================== RESPONSIVE ==================== */
 @media (max-width: 640px) {
     section { padding: 72px 20px; }
-    .hero { padding: 72px 20px 48px; }
-    .device { width: 240px; height: 490px; border-radius: 46px; }
-    .device-notch { width: 94px; height: 28px; }
-    .device-screen { border-radius: 36px; }
+    .hero { padding: 84px 20px 96px; }
     .contact-card { padding: 36px 24px; }
     .feature-card { padding: 26px; }
     .features-grid { grid-template-columns: 1fr; }
@@ -767,40 +608,6 @@ section {
         Download on App Store
       </a>
       <a href="#features" class="btn btn-secondary">Learn more →</a>
-    </div>
-
-    <div class="device-wrap">
-      <div class="device">
-        <div class="device-notch"></div>
-        <div class="device-screen">
-          <div class="device-status">
-            <span>9:41</span>
-            <span class="device-status-right">
-              <svg viewBox="0 0 18 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="14" height="6" rx="1.2"/><rect x="3" y="5" width="9" height="2" fill="currentColor"/></svg>
-            </span>
-          </div>
-          <div class="device-body">
-            <div class="device-lens-chip">
-              <span>.5</span>
-              <span class="active">1×</span>
-              <span>2</span>
-              <span>3</span>
-            </div>
-            <div class="device-viewfinder">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-            </div>
-            <div class="device-controls">
-              <div class="device-thumb"></div>
-              <div class="device-shutter-wrap">
-                <div class="device-shutter"></div>
-              </div>
-              <div class="device-flip">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
